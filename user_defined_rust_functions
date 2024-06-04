@@ -1,0 +1,33 @@
+#
+# @brief   User-defined functions for Rust env
+# @version ver.1.0.0
+# @date    Sun Jun  2 05:23:41 PM CEST 2024
+# @company None, free software to use 2024
+# @author  Vladimir Roncevic <elektron.ronca@gmail.com>
+#
+
+# Rust helper
+function __rs_helper {
+    read -r -d '' END_HELP_TXT <<- END_HELP_TXT
+### Install Rust (no arguments)
+    install_rs
+
+### Run setup of Rust env (no arguments)
+    setup_rs
+
+END_HELP_TXT
+    echo "$END_HELP_TXT"
+}
+
+# Install rust
+function __install_rs {
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    return $?
+}
+
+# Setup rust env
+function __setup_rs {
+    source "$HOME/.cargo/env"
+    return $?
+}
+
