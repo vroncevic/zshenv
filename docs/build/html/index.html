@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>zshenv (Linux ZSH Environment files) &#8212; zshenv https://github.com/vroncevic/zshenv/releases documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    
+    <script src="_static/documentation_options.js?v=c61b6f66"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">zshenv https://github.com/vroncevic/zshenv/releases documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">zshenv (Linux ZSH Environment files)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="zshenv-linux-zsh-environment-files">
+<h1>zshenv (Linux ZSH Environment files)<a class="headerlink" href="#zshenv-linux-zsh-environment-files" title="Link to this heading">¶</a></h1>
+<p>Linux ZSH environment configuration files.</p>
+<p>Developed in the <a class="reference external" href="https://en.wikipedia.org/wiki/Z_shell">Z shell</a>.</p>
+<p>The README is used to introduce the tool and provide instructions on
+how to install the tool, any machine dependencies it may have, and any
+other information that should be provided before the tool is installed.</p>
+<p><a class="reference external" href="https://github.com/vroncevic/zshenv/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/vroncevic/zshenv.svg" /></a> <a class="reference external" href="https://zshenv.readthedocs.io/projects/zshenv/en/latest/?badge=latest"><img alt="Documentation Status" src="https://readthedocs.org/projects/zshenv/badge/?version=latest" /></a> <a class="reference external" href="https://github.com/vroncevic/zshenv/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/vroncevic/zshenv.svg" /></a></p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h1>
+<p><a class="reference external" href="https://www.debian.org"><img alt="Debian Linux OS" src="https://raw.githubusercontent.com/vroncevic/zshenv/dev/docs/ubuntux.png" /></a></p>
+<p>Navigate to the release <a class="reference external" href="https://github.com/vroncevic/zshenv/releases">page</a> download and extract the release archive.</p>
+<p>To install <strong>zshenv</strong>, type the following</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>xvzf<span class="w"> </span>zshenv-x.y.z.tar.gz
+<span class="nb">cd</span><span class="w"> </span>zshenv-x.y.z
+<span class="c1"># standard user</span>
+cp<span class="w"> </span>user_defined_functions<span class="w">           </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_functions
+cp<span class="w"> </span>user_defined_str_functions<span class="w">       </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_str_functions
+cp<span class="w"> </span>user_defined_file_functions<span class="w">      </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_file_functions
+cp<span class="w"> </span>user_defined_hw_functions<span class="w">        </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_hw_functions
+cp<span class="w"> </span>user_defined_net_functions<span class="w">       </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_net_functions
+cp<span class="w"> </span>user_defined_py_functions<span class="w">        </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_py_functions
+cp<span class="w"> </span>user_defined_perl_functions<span class="w">      </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_perl_functions
+cp<span class="w"> </span>user_defined_java_functions<span class="w">      </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_java_functions
+cp<span class="w"> </span>user_defined_avr_functions<span class="w">       </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_avr_functions
+cp<span class="w"> </span>user_defined_stm8_functions<span class="w">      </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_stm8_functions
+cp<span class="w"> </span>user_defined_web_functions<span class="w">       </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_web_functions
+cp<span class="w"> </span>user_defined_git_functions<span class="w">       </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_git_functions
+cp<span class="w"> </span>user_defined_doc_functions<span class="w">       </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_doc_functions
+cp<span class="w"> </span>user_defined_disk_functions<span class="w">      </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_disk_functions
+cp<span class="w"> </span>user_defined_rust_functions<span class="w">      </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_rust_functions
+cp<span class="w"> </span>user_defined_yocto_functions<span class="w">     </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.user_defined_yocto_functions
+cp<span class="w"> </span>zsh_aliases<span class="w">                      </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.zsh_aliases
+cp<span class="w"> </span>zshrc<span class="w">                            </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.zshrc
+cp<span class="w"> </span>gitconfig<span class="w">                        </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.gitconfig
+cp<span class="w"> </span>gdbinit<span class="w">                          </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.gdbinit
+
+<span class="c1"># root user</span>
+cp<span class="w"> </span>user_defined_functions<span class="w">           </span>/root/.user_defined_functions
+cp<span class="w"> </span>user_defined_str_functions<span class="w">       </span>/root/.user_defined_str_functions
+cp<span class="w"> </span>user_defined_file_functions<span class="w">      </span>/root/.user_defined_file_functions
+cp<span class="w"> </span>user_defined_hw_functions<span class="w">        </span>/root/.user_defined_hw_functions
+cp<span class="w"> </span>user_defined_net_functions<span class="w">       </span>/root/.user_defined_net_functions
+cp<span class="w"> </span>user_defined_py_functions<span class="w">        </span>/root/.user_defined_py_functions
+cp<span class="w"> </span>user_defined_perl_functions<span class="w">      </span>/root/.user_defined_perl_functions
+cp<span class="w"> </span>user_defined_java_functions<span class="w">      </span>/root/.user_defined_java_functions
+cp<span class="w"> </span>user_defined_avr_functions<span class="w">       </span>/root/.user_defined_avr_functions
+cp<span class="w"> </span>user_defined_stm8_functions<span class="w">      </span>/root/.user_defined_stm8_functions
+cp<span class="w"> </span>user_defined_web_functions<span class="w">       </span>/root/.user_defined_web_functions
+cp<span class="w"> </span>user_defined_git_functions<span class="w">       </span>/root/.user_defined_git_functions
+cp<span class="w"> </span>user_defined_disk_functions<span class="w">      </span>/root/.user_defined_disk_functions
+cp<span class="w"> </span>user_defined_doc_functions<span class="w">       </span>/root/.user_defined_doc_functions
+cp<span class="w"> </span>user_defined_rust_functions<span class="w">      </span>/root/.user_defined_rust_functions
+cp<span class="w"> </span>user_defined_yocto_functions<span class="w">     </span>/root/.user_defined_yocto_functions
+cp<span class="w"> </span>zsh_aliases<span class="w">                      </span>/root/.zsh_aliases
+cp<span class="w"> </span>zshrc<span class="w">                            </span>/root/.zshrc
+cp<span class="w"> </span>gdbinit<span class="w">                          </span>/root/.gdbinit
+</pre></div>
+</div>
+<p>Updated default locale</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Updated<span class="w"> </span>default<span class="w"> </span>locale
+</pre></div>
+</div>
+<p>Modify the configuration to</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">LANG</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
+<span class="nv">LANGUAGE</span><span class="o">=</span><span class="s2">&quot;en_US:en&quot;</span>
+<span class="nv">LC_NUMERIC</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
+<span class="nv">LC_TIME</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
+<span class="nv">LC_MONETARY</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
+<span class="nv">LC_PAPER</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
+<span class="nv">LC_IDENTIFICATION</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
+<span class="nv">LC_NAME</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
+<span class="nv">LC_ADDRESS</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
+<span class="nv">LC_TELEPHONE</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
+<span class="nv">LC_MEASUREMENT</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
+</pre></div>
+</div>
+<p>Or you can use Docker to create an image or container.</p>
+</section>
+<section id="dependencies">
+<h1>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">¶</a></h1>
+<p><strong>zshenv</strong> requires the next modules and libraries</p>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+</section>
+<section id="set-of-modules">
+<h1>Set of modules<a class="headerlink" href="#set-of-modules" title="Link to this heading">¶</a></h1>
+<p><strong>zshenv</strong> is based on Z shell.</p>
+<p>Configuration files</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user_defined_functions
+user_defined_str_functions
+user_defined_file_functions
+user_defined_hw_functions
+user_defined_net_functions
+user_defined_py_functions
+user_defined_perl_functions
+user_defined_java_functions
+user_defined_avr_functions
+user_defined_stm8_functions
+user_defined_web_functions
+user_defined_git_functions
+user_defined_disk_functions
+user_defined_doc_functions
+user_defined_rust_functions
+user_defined_yocto_functions
+zsh_aliases
+zshrc
+gitconfig
+gdbinit
+</pre></div>
+</div>
+</section>
+<section id="copyright-and-licence">
+<h1>Copyright and licence<a class="headerlink" href="#copyright-and-licence" title="Link to this heading">¶</a></h1>
+<p><a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0"><img alt="License: GPL v3" src="https://img.shields.io/badge/License-GPLv3-blue.svg" /></a> <a class="reference external" href="https://opensource.org/licenses/Apache-2.0"><img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a></p>
+<p>Copyright (C) 2024 by <a class="reference external" href="https://vroncevic.github.io/zshenv">vroncevic.github.io/zshenv</a></p>
+<p><strong>zshenv</strong> is free software; you can redistribute it and/or modify it
+under the same terms as Z shell itself, either Z shell version 5.9 or,
+at your option, any later version of Z shell 5 you may have available.</p>
+<p>Lets help and support FSF.</p>
+<p><a class="reference external" href="https://my.fsf.org/"><img alt="Free Software Foundation" src="https://raw.githubusercontent.com/vroncevic/zshenv/dev/docs/fsf-logo_1.png" /></a></p>
+<p><a class="reference external" href="https://my.fsf.org/donate/"><img alt="Donate" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" /></a></p>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">zshenv (Linux ZSH Environment files)</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li><a class="reference internal" href="#set-of-modules">Set of modules</a></li>
+<li><a class="reference internal" href="#copyright-and-licence">Copyright and licence</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">zshenv https://github.com/vroncevic/zshenv/releases documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">zshenv (Linux ZSH Environment files)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, https://vroncevic.github.io/zshenv.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

@@ -25,7 +25,7 @@ other information that should be provided before the tool is installed.
 
 ### Installation
 
-![Debian Linux OS](https://raw.githubusercontent.com/vroncevic/zshenv/dev/docs/debtux.png)
+![Debian Linux OS](https://raw.githubusercontent.com/vroncevic/zshenv/dev/docs/ubuntux.png)
 
 Navigate to the release **[page](https://github.com/vroncevic/zshenv/releases)** download and extract the release archive.
 
