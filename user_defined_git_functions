@@ -1,0 +1,111 @@
+#
+# @brief   User-defined functions for git env
+# @version ver.1.0.0
+# @date    Sun Jun  2 05:05:00 PM CEST 2024
+# @company None, free software to use 2024
+# @author  Vladimir Roncevic <elektron.ronca@gmail.com>
+#
+
+# Git helper
+function __git_helper {
+    read -r -d '' END_HELP_TXT <<- END_HELP_TXT
+### List all big changes (no arguments)
+    check_big_changes
+
+### List all conflicts (no arguments)
+    list_conflicts
+
+### List all files with conflits (no arguments)
+    list_conflit_files
+
+### List before clean up (no arguments)
+    clean_list
+
+### Clean up repo and fetch all changes (no arguments)
+    clean_fetch_all
+
+### Check big changes (no arguments)
+    check_big_changes
+
+### Remove big file (file path)
+    remove_big_file ../backup.tar.bz2
+
+### Show tags and sha1 (no arguments)
+    ref_tag
+
+### Setup github ssh key
+    add_git_ssh
+
+END_HELP_TXT
+    echo "$END_HELP_TXT"
+}
+
+# setup github ssh key
+function __add_git_ssh {
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+    return $?
+}
+
+
+# List all conflicts
+function __list_conflicts {
+    git ls-files -u | cut -f 2 | sort -u
+    return $?
+}
+
+# List file names with conflicts
+function __list_conflict_files {
+    git diff --name-only --diff-filter=U
+    return $?
+}
+
+# List before clean up
+function __clean_list {
+    git clean -nfd .
+    return $?
+}
+
+# Fetch all and clean repo
+function __clean_fetch_all {
+    git fetch --all --prune
+    return $?
+}
+
+# Check commits with big changes
+function __check_big_changes {
+    local batch_check='%(objecttype) %(objectname) %(objectsize) %(rest)'
+    git rev-list --objects --all | \
+    git cat-file --batch-check=${batch_check} | \
+    sed -n 's/^blob //p' | \
+    sort --numeric-sort --key=2 | \
+    cut -c 1-12,41- | \
+    $(command -v gnumfmt || echo numfmt) \
+    --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest
+    return $?
+}
+
+# Remove big file
+function __remove_big_file {
+    local number_of_arguments=$# file_path=$1
+    if [[ ${number_of_arguments} -ne 1 ]]; then
+        printf "%s\n" "Usage: remove_big_file <file_path>"
+        return 127
+    fi
+    git filter-branch -f --index-filter \
+    "git rm --cached --ignore-unmatch ${file_path}" \
+    HEAD
+    rm -rf .git/refs/original/
+    git reflog expire --expire=now --all
+    git gc --prune=now
+    git gc --aggressive --prune=now
+    git push --all --prune --force
+    return $?
+}
+
+# Show tag and sha1
+function __ref_tag {
+    git show-ref --tags
+    return $?
+}
+
